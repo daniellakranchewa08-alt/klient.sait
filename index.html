@@ -1,0 +1,276 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Покриви Пазарджик / Пловдив</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap">
+<style>
+/* Layout: тъмна "шисти" лента горе с диагонал под наклона на покрив, светли секции под нея, една акцентна керемидено-червена. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#18222c; --muted:#56636f; --line:#d5dbe1;
+  --slate:#1f2c38; --slate-2:#2b3b4a; --on-slate:#eef2f5; --on-slate-muted:#a9b6c2;
+  --accent:#c2402a; --accent-ink:#ffffff; --ok:#1f7a4d; --err:#b3261e;
+  --ph-a:#e3e8ed; --ph-b:#d3dae1;
+  --display:"Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Golos Text","Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#11181f; --surface:#19232d; --ink:#e8edf1; --muted:#9aa8b4; --line:#2e3c49;
+  --slate:#0b1116; --slate-2:#19232d; --on-slate:#eef2f5; --on-slate-muted:#9aa8b4;
+  --accent:#e2573f; --accent-ink:#ffffff; --ok:#56c08a; --err:#ff8a80;
+  --ph-a:#1f2b36; --ph-b:#283642; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#11181f; --surface:#19232d; --ink:#e8edf1; --muted:#9aa8b4; --line:#2e3c49;
+  --slate:#0b1116; --slate-2:#19232d; --on-slate:#eef2f5; --on-slate-muted:#9aa8b4;
+  --accent:#e2573f; --accent-ink:#ffffff; --ok:#56c08a; --err:#ff8a80;
+  --ph-a:#1f2b36; --ph-b:#283642; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+h3{font-size:1.25rem}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font:600 1rem var(--body);padding:.85em 1.5em;border:0;border-radius:3px;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--on-slate);box-shadow:inset 0 0 0 2px var(--on-slate-muted)}
+
+/* Header + hero */
+.top{background:var(--slate);color:var(--on-slate)}
+.bar{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-block:16px}
+.logo{font:700 1.25rem var(--display);text-transform:uppercase;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.logo svg{flex:none}
+.phone{font-weight:600;font-variant-numeric:tabular-nums;user-select:all}
+.phone small{display:block;font-weight:400;font-size:.75rem;color:var(--on-slate-muted)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-block:40px 96px}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem)}
+.hero h1 span{color:var(--accent)}
+.hero .lead{color:var(--on-slate-muted);font-size:1.1rem;max-width:34em;margin-top:18px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero ul{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--on-slate);font-size:.95rem}
+.hero li::before{content:"";display:inline-block;width:10px;height:10px;background:var(--accent);margin-right:8px;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.slope{height:64px;background:var(--bg);clip-path:polygon(0 100%,100% 0,100% 100%);margin-top:-64px}
+
+/* Photo slots */
+.ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;
+  width:100%;max-width:100%;aspect-ratio:4/3;padding:16px;border:2px dashed var(--muted);border-radius:4px;cursor:pointer;overflow:hidden;
+  color:var(--muted);font-size:.9rem;background:repeating-linear-gradient(135deg,var(--ph-a) 0 14px,var(--ph-b) 14px 28px)}
+.ph b{font:600 1rem var(--display);text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.ph input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.top .ph{border-color:var(--on-slate-muted);color:var(--on-slate-muted);--ph-a:var(--slate-2);--ph-b:var(--slate)}
+.top .ph b{color:var(--on-slate)}
+.ph.hero-ph{aspect-ratio:5/4}
+.ph.filled{border:0;padding:0;cursor:default}
+
+section{padding-block:64px}
+.head{display:grid;gap:10px;margin-bottom:32px;max-width:44em}
+.head p{color:var(--muted)}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.services article{padding:24px 24px 24px 0;border-bottom:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.services p{color:var(--muted);font-size:.97rem}
+
+/* Process */
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:6px;align-content:start}
+.steps li::before{content:counter(s);font:700 3rem/1 var(--display);color:var(--accent)}
+.steps p{color:var(--muted);font-size:.97rem}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.note{margin-top:14px;font-size:.88rem;color:var(--muted)}
+
+.areas{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.areas li{border:1px solid var(--line);background:var(--surface);padding:.4em .9em;border-radius:3px;font-weight:500}
+.areas li.main{background:var(--slate);color:var(--on-slate);border-color:var(--slate)}
+
+/* Contact */
+.contact{background:var(--slate);color:var(--on-slate)}
+.contact .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+.contact .grid>*{min-width:0}
+.contact .head p,.contact dl dt{color:var(--on-slate-muted)}
+.contact dl{margin:0;display:grid;gap:16px}
+.contact dt{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}
+.contact dd{margin:0;font-size:1.15rem;font-weight:600;user-select:all;overflow-wrap:anywhere}
+form{background:var(--surface);color:var(--ink);padding:28px;border-radius:4px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font-size:.88rem;font-weight:600}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:.7em .8em;width:100%}
+textarea{min-height:110px;resize:vertical}
+.msg{grid-column:1/-1;padding:12px 14px;border-radius:3px;font-size:.95rem;border:1px solid currentColor}
+.msg.ok{color:var(--ok)} .msg.err{color:var(--err)}
+form .btn{grid-column:1/-1;justify-self:start}
+form small{grid-column:1/-1;color:var(--muted)}
+
+footer{background:var(--slate);color:var(--on-slate-muted);border-top:1px solid var(--slate-2);font-size:.9rem}
+footer .wrap{padding-block:20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:860px){
+  .hero,.contact .grid{grid-template-columns:1fr}
+  .services,.steps{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .services,.steps,form{grid-template-columns:1fr}
+  .services article{padding-right:0}
+}
+</style>
+
+<header class="top">
+  <div class="wrap bar">
+    <div class="logo">
+      <svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true"><path d="M2 16 17 3l15 13" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="square"/><path d="M7 24V16l10-8.5L27 16v8z" fill="var(--on-slate)"/></svg>
+      Покриви Пазарджик / Пловдив
+    </div>
+    <div class="phone">0887 154 432<small>Пон–Съб, 8:00–19:00</small></div>
+  </div>
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">Пазарджик · Пловдив · областта</p>
+      <h1>Покрив, който <span>не тече</span></h1>
+      <p class="lead">Нови покриви, ремонт и хидроизолация за къщи, вили и блокове. Идваме на оглед, даваме писмена оферта и работим с гаранция.</p>
+      <div class="cta">
+        <a class="btn" href="#kontakt">Заяви безплатен оглед</a>
+        <a class="btn ghost" href="#uslugi">Виж услугите</a>
+      </div>
+      <ul>
+        <li>Безплатен оглед</li>
+        <li>Писмена гаранция</li>
+        <li>Цена на кв.м преди старт</li>
+      </ul>
+    </div>
+    <div class="ph hero-ph filled"><img src="img/3.jpg" alt="Майстор монтира метални керемиди върху покрив с мембрана и летви"></div>
+  </div>
+  <div class="slope" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="uslugi">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Услуги</p>
+      <h2>Всичко за покрива, от билото до улука</h2>
+    </div>
+    <div class="services">
+      <article><h3>Нов покрив</h3><p>Дървена конструкция, дъсчена обшивка, мембрана, летви и покритие с керемиди или метални керемиди.</p></article>
+      <article><h3>Ремонт на покрив</h3><p>Пренареждане и подмяна на керемиди, смяна на изгнили греди, подновяване на капаци и била.</p></article>
+      <article><h3>Отстраняване на течове</h3><p>Откриваме откъде влиза водата и я спираме: около комини, улами, капандури и покривни прозорци.</p></article>
+      <article><h3>Хидроизолация</h3><p>Плоски покриви, тераси и гаражи с битумни мембрани на газопламъчно залепване или течна изолация.</p></article>
+      <article><h3>Улуци и водосточни тръби</h3><p>Монтаж и подмяна на улуци, казанчета и тръби. Почистване от листа и наноси.</p></article>
+      <article><h3>Тенекеджийски услуги</h3><p>Обшивки на комини, бордове и стрехи, ветрови дъски, снегозадържащи елементи, навеси.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Как работим</p>
+      <h2>От обаждането до сухия таван</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Оглед</h3><p>Идваме на място, качваме се на покрива, мерим и снимаме проблемните места.</p></li>
+      <li><h3>Оферта</h3><p>Получавате писмена оферта с количества, материали, цена на кв.м и срок.</p></li>
+      <li><h3>Изпълнение</h3><p>Работим по договор. При дъжд покриваме отворения покрив с платнища.</p></li>
+      <li><h3>Предаване</h3><p>Почистваме обекта, показваме свършеното и издаваме гаранция.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="obekti">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Наши обекти</p>
+      <h2>Вижте работата ни</h2>
+      <p>Снимки преди и след от покриви в Пазарджик, Пловдив и селата наоколо.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph filled"><img src="img/2.jpg" alt="Нова летвена скара върху стара покривна конструкция, до тухлен комин"></div>
+      <div class="ph filled"><img src="img/4.jpg" alt="Монтаж на челна дъска на покрив с ламарина"></div>
+      <div class="ph filled"><img src="img/5.jpg" alt="Монтаж на дървена покривна конструкция"></div>
+      <div class="ph filled"><img src="img/1.jpg" alt="На обект под скеле, до разкрита дървена покривна конструкция"></div>
+      <label class="ph"><b>Снимка 5</b>Свободно място<input type="file" accept="image/*" id="ph-5" aria-label="Снимка 5"></label>
+      <label class="ph"><b>Снимка 6</b>Свободно място<input type="file" accept="image/*" id="ph-6" aria-label="Снимка 6"></label>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Райони</p>
+      <h2>Къде работим</h2>
+    </div>
+    <ul class="areas">
+      <li class="main">Пазарджик</li><li class="main">Пловдив</li>
+      <li>Септември</li><li>Пещера</li><li>Велинград</li><li>Панагюрище</li><li>Белово</li>
+      <li>Стамболийски</li><li>Асеновград</li><li>Карлово</li><li>Раковски</li><li>Хисаря</li><li>Първомай</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap grid">
+    <div>
+      <div class="head">
+        <p class="eyebrow">Контакти</p>
+        <h2>Заявете безплатен оглед</h2>
+        <p>Оставете телефон и ще ви се обадим до края на работния ден, за да уговорим час.</p>
+      </div>
+      <dl>
+        <div><dt>Телефон</dt><dd>0887 154 432</dd></div>
+        <div><dt>Имейл</dt><dd>vashiat@email.bg</dd></div>
+        <div><dt>Работно време</dt><dd>Понеделник–Събота, 8:00–19:00</dd></div>
+      </dl>
+    </div>
+    <form id="contact-form" novalidate>
+      <div class="f"><label for="name">Име</label><input id="name" name="name" autocomplete="name" required></div>
+      <div class="f"><label for="tel">Телефон</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="08XX XXX XXX" required></div>
+      <div class="f"><label for="city">Населено място</label>
+        <select id="city" name="city"><option>Пазарджик</option><option>Пловдив</option><option>Друго (опишете в съобщението)</option></select></div>
+      <div class="f"><label for="service">Услуга</label>
+        <select id="service" name="service"><option>Ремонт на покрив</option><option>Нов покрив</option><option>Отстраняване на теч</option><option>Хидроизолация</option><option>Улуци и водосточни тръби</option><option>Тенекеджийски услуги</option><option>Друго</option></select></div>
+      <div class="f full"><label for="message">Съобщение (по желание)</label><textarea id="message" name="message" placeholder="Напр. къща на два етажа, тече около комина, около 120 кв.м"></textarea></div>
+      <p class="msg" id="form-msg" role="status" hidden></p>
+      <button class="btn" type="submit">Изпрати запитване</button>
+      <small>Използваме данните ви само за да се свържем с вас за огледа.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Покриви Пазарджик / Пловдив</span><span>Ремонт и изграждане на покриви</span></div></footer>
+
+<script>
+document.querySelectorAll('.ph input').forEach(function(inp){
+  inp.addEventListener('change',function(){
+    var f=inp.files&&inp.files[0]; if(!f) return;
+    var r=new FileReader();
+    r.onload=function(){
+      var box=inp.parentNode, img=box.querySelector('img')||document.createElement('img');
+      img.alt=inp.getAttribute('aria-label'); img.src=r.result; box.insertBefore(img,inp);
+      box.style.borderStyle='solid';
+    };
+    r.readAsDataURL(f);
+  });
+});
+var form=document.getElementById('contact-form'), msg=document.getElementById('form-msg');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=form.name.value.trim(), tel=form.tel.value.replace(/[\s\-()]/g,'');
+  msg.hidden=false;
+  if(!name){msg.className='msg err';msg.textContent='Въведете име, за да знаем към кого да се обърнем.';form.name.focus();return;}
+  if(!/^(\+359|0)\d{8,9}$/.test(tel)){msg.className='msg err';msg.textContent='Въведете валиден телефон, например 0888 123 456.';form.tel.focus();return;}
+  msg.className='msg ok';
+  msg.textContent='Формата работи, но това е преглед: запитването още не се изпраща никъде. След качване на сайта ще пристига на вашия имейл.';
+});
+</script>
+
+</body></html>
